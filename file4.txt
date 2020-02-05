@@ -2,3 +2,4 @@ this is the content of file 4
 added content to file 4
 new more content
 new line
+super new line 1
