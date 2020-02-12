@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./formbootstrap.css"/>
+    
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script>
+    
+    function choosefile(){
+        
+        document.getElementById('attachment').click();
+       
+    }
+    
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar navbar-expand-lg bg-light">
+            <p class="navbar-brand">TO THE NEW</p>
+            <div class="navbar-nav">
+                
+                <p id="upper1" class="nav-item">Home</p>
+                <p id="upper2" class="nav-item">Quick Help</p>
+            </div>
+        </div>
+        <div id="center">
+            <h4 id="heading">Bug Report</h4>
+            <div id="body">
+                <form class="form">
+                    <div id="test">
+
+                    
+                    <div class="form-group">
+                        <label>Title:<span class="req">*</span></label>
+                        <input class="form-control" type="text">
+                    </div>
+                </div>
+                    <div class="form-group">
+                        <label>Description:<span class="req">*</span></label>
+                        <input class="form-control" type="text" id="textarea">
+                    </div>
+                
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                              Operating System
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Windows</a>
+                              <a class="dropdown-item" href="#">Mac</a>
+                              <a class="dropdown-item" href="#">Linux</a>
+                            </div>
+                          
+                    </div>
+
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            Product
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Windows</a>
+                          <a class="dropdown-item" href="#">Mac</a>
+                          <a class="dropdown-item" href="#">Linux</a>
+                        </div>
+                      
+                </div>
+                <div class="form-group">
+                    <label>Version:</label>
+                    <input class="form-control" type="number" required>
+                </div>    
+
+                <div class="form-group">
+                    <label>Licence:</label>
+                    <div>
+                    <span>
+                    <input type="radio"><span>Free</span></span>
+                    <span>
+                    <input type="radio"><span>Business</span></span>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    Severity
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">High</a>
+                  <a class="dropdown-item" href="#">Medium</a>
+                  <a class="dropdown-item" href="#">Low</a>
+                </div>
+              
+        </div>
+<div  class="form-group">
+    <label>Select Attachment</label>
+        <div id="file-con">
+
+           
+        <input id="attachment"  type="file" >
+        <button  id="fbtn" class="btn btn-info">Choose File </button>
+    </div>
+    
+    
+
+</div>
+<div id="last">
+    <button class="btn btn-info">Send</button>
+</div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+    
+    
+</body>
+</html>

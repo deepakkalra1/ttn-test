@@ -1,0 +1,81 @@
+#upper1{
+    
+    float: right;
+    
+}
+#upper2{
+    
+    float: right;
+}
+#body{
+ padding-left: 3%;
+ padding-right: 3%;   
+}
+#center{
+    width: 30vw;
+    height: auto;
+  position: relative;
+    border: 1px solid #addeec;
+    border-radius: 5px;
+}
+#heading{
+    text-align: center;
+    background: #addeec;
+    font-weight: bold;
+    color: white;
+}
+#attachment{
+    display: block;
+    font-size: 0.7rem;
+    text-overflow: ellipsis;
+    padding: 0px;
+    padding-left: 8%;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    outline: none;
+    height: 100%;
+    
+}
+#file-con{
+border: 1px solid #addeec;
+    height: auto;
+    border-left: 0px;
+    margin: 0px;
+    height: 2rem;
+    position: relative;
+    border-radius: 5px;
+  
+}
+#fbtn{
+
+    position: absolute;
+    top: 0px;
+    width: 32%;
+    font-size: 0.7rem;
+    left: 0px;
+    height: 2rem;
+    z-index: 2;
+    height: 100%;
+}
+#last{
+    background: #c5e7f0;
+}
+.req{
+   
+    color: red;
+}
+.form-group{
+  
+}
+.btn{
+    height: 2rem;
+    
+    font-size: 0.7rem;
+}
+.form-control{
+    height: 2rem;
+}
+label{
+    margin: 0px;
+}
