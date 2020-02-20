@@ -1,65 +1,93 @@
-//import java.util.Scanner;
-//
-//public class LibraryManagement extends LibOperations implements UserDetails {
-//    public void getDetails() {
-//        System.out.println("Name :" + name);
-//        System.out.println("Age: " + age);
-//    }
-//
-//    public void login(String user, String pass) {
-//        if (user == "Shobhit@29" && pass == "abcde") {
-//            System.out.println("Access Granted!");
-//        } else
-//            System.out.println("Access Denied");
-//    }
-//
-//    public void issueBook(int bookId) {
-//        System.out.println(bookId + " issued to " + username);
-//    }
-//
-//    public void retBook(int bookId) {
-//        System.out.println(bookId + " returned by " + username);
-//    }
 //
 //
+//import java.util.Date;
 //
-//
-//public static void main(String[] args) {
-//int opt;
-//char a;
-//LibraryManagement lib = new LibraryManagement();
-//Scanner sc = new Scanner(System.in);
-//do {
-//System.out.println("Choose an option: /n1.User Details/n2.Login/n3.Issue book/n4.Return Book/n5.exit");
-//System.out.println("Enter your option: ");
-//opt = sc.nextInt();
-//switch (opt) {
-//case 1:
-//lib.getDetails();
-//break;
-//case 2:
-//lib.login("Shobhit@29", "abcde");
-//break;
-//case 3:
-//lib.issueBook(101);
-//break;
-//case 4:
-//lib.retBook(101);
-//break;
-//case 5:
-//System.exit(0);
-//default:
-//System.out.println("Wrong input");
-//break;
+//enum BookFormat {
+//    HARDCOVER,
+//    PAPERBACK,
+//    AUDIO_BOOK,
+//    EBOOK,
+//    NEWSPAPER,
+//    MAGAZINE,
+//    JOURNAL
 //}
-//System.out.println("Do you want to continue? y/n");
-//a = sc.next().charAt(0);
+//enum BookStatus {
+//    AVAILABLE,
+//    RESERVED,
+//    LOANED,
+//    LOST
 //}
-//while (a == 'y');
+//enum ReservationStatus{
+//    WAITING,
+//    PENDING,
+//    CANCELED,
+//    NONE
+//}
+//enum AccountStatus{
+//    ACTIVE,
+//    CLOSED,
+//    CANCELED,
+//    BLACKLISTED,
+//    NONE
+//}
+//class Address {
+//    private String streetAddress;
+//    private String city;
+//    private String state;
+//    private String zipCode;
+//    private String country;
+//}
+//}
+//class Constants {
+//    public static final int MAX_BOOKS_ISSUED_TO_A_USER = 5;
+//    public static final int MAX_LENDING_DAYS = 10;
 //}
 //
-////LibraryManagement() {
-////
-////}
 //
+//// For simplicity, we are not defining getter and setter functions. The reader can
+//// assume that all class attributes are private and accessed through their respective
+//// public getter methods and modified only through their public methods function.
+//public abstract class Account {
+//    private String id;
+//    private String password;
+//    private AccountStatus status;
+//    private Person person;
+//    public boolean resetPassword();
+//}
+//public class Librarian extends Account {
+//    private Date dateOfMembership;
+//    private int totalBooksCheckedout;
+//    public int getTotalBooksCheckedout();
+//    public boolean reserveBookItem(BookItem bookItem);
+//    private void incrementTotalBooksCheckedout();
+//    public boolean checkoutBookItem(BookItem bookItem) {
+//    }
+//    private void checkForFine(String bookItemBarcode) {
+//    }
+//    public void returnBookItem(BookItem bookItem) {
+//    }
+//    public boolean renewBookItem(BookItem bookItem) {
+//    }
+//}
+//public class BookReservation {
+//    private Date creationDate;
+//    private ReservationStatus status;
+//    private String bookItemBarcode;
+//    private String memberId;
+//    public static BookReservation fetchReservationDetails(String barcode);
+//}
+//public class BookLending {
+//    private Date creationDate;
+//    private Date dueDate;
+//    private Date returnDate;
+//    private String bookItemBarcode;
+//    private String memberId;
+//    public static void lendBook(String barcode, String memberId);
+//    public static BookLending fetchLendingDetails(String barcode);
+//}
+//class Fine {
+//    private Date creationDate;
+//    private double bookItemBarcode;
+//    private String memberId;
+//    public static void collectFine(String memberId, long days) {}
 //}
