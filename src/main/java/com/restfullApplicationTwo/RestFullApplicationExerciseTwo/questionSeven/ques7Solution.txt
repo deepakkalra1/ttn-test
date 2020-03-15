@@ -1,0 +1,2 @@
+for the purpose of describing the description of ccontroller class and restApi's
+i have used annotation on api of =@ApiOperation, and controllers with annotation of @Api
