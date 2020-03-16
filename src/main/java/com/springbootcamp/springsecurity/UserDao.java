@@ -1,5 +1,6 @@
 package com.springbootcamp.springsecurity;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Repository;
@@ -11,21 +12,17 @@ import java.util.Optional;
 @Repository
 public class UserDao {
 
-    PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    @Autowired
+    UserRepository userRepository;
 
-    List<User> userList = Arrays.asList(
-            new User("user", passwordEncoder.encode("pass"), Arrays.asList(new GrantAuthorityImpl("ROLE_USER"))),
-            new User("admin", passwordEncoder.encode("pass"), Arrays.asList(new GrantAuthorityImpl("ROLE_ADMIN"))));
-
-    User loadUserByUsername(String username) {
-        User user = null;
-        Optional<User> userOptional = userList.stream().filter(e -> e.getUsername().equals(username)).findFirst();
-        if(userOptional.isPresent()){
-            user= userOptional.get();
-        }else {
-            throw new RuntimeException("User not found");
+    AppUser loadUserByUsername(String username) {
+        User user = userRepository.findByUsername(username);
+        System.out.println(user);
+        if (username != null) {
+            return new AppUser(user.getUsername(), user.getPassword(), Arrays.asList(new GrantAuthorityImpl(user.getRole())));
+        } else {
+            throw new RuntimeException();
         }
 
-        return user;
     }
 }
