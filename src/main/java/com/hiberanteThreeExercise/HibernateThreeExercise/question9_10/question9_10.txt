@@ -1,0 +1,15 @@
+Question 9=
+having created session object
+with EntityManager class method unwrap
+we can use evict method to destroy the cached object
+
+
+
+
+
+Question 10=
+@Transactional creates the persistent context which technically hold the data untill the session is destroyed
+and it creates the level 1 cache
+therefore it can be used in combination with transaction management wherein we want the entire set of query to execute or none
+and with lazy loading as well
+and certainly to exploit caching perks
